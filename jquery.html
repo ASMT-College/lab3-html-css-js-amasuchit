@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="jquery.js"></script>
+    <div id="mydiv" style="display: none">If you click, i blink.</div>
+
+    <!-- <p style="display: none">If you click, i blink.</p>
+    style display none rakhda chai herda kheri dekhaudaina suru ma -->
+
+    <button id="hide">Hide</button>
+    <button id="show" onclick="$('p').show()">Show</button>
+
+    <script>
+      $("#hide").click(function () {
+        $("#mydiv").hide();
+      });
+
+      $("#show").click(function () {
+        $("#mydiv").show();
+      });
+
+      $("#mydiv").on("mouseenter", function () {
+        $(this).css("background-color", "green");
+
+        $("#mydiv").on("mouseleave", function () {
+          $(this).css("background-color", "white");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- give example of xml and json for list of employees
+first name
+last name
+age -->

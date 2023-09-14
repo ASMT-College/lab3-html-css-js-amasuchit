@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var circle = {
+        radius: 20,
+
+        area() {
+          return Math.PI * this.radius ** 2;
+        },
+      };
+
+      function ar() {
+        document.write(
+          "<br> The area of circle:\n",
+          Math.PI * this.radius ** 2
+        );
+      }
+
+      function cirObj(ra) {
+        this.radius = ra;
+        this.area = ar;
+      }
+
+      document.write(circle.area());
+
+      newCircle = new cirObj(20);
+
+      newCircle.area();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop-up Powerbomb</title>
+  </head>
+  <body>
+    <button onclick="Delete()">Delete kia jaye?</button>
+    <button ondblclick="showPrompt()">Show Prompt</button>
+    <script>
+      alert("Hello, its me");
+      function showPrompt() {
+        var name = prompt("Name vandeuna ta timro:");
+        document.write("Aaunus aaunus swagataam!\n" + name + "-ji");
+      }
+      function Delete() {
+        var result = confirm("Sachi? garne nai hota? gardim delete?");
+        if (result == true) {
+          document.write("Gayooo");
+        }
+      }
+    </script>
+  </body>
+</html>
+<!-- 
+Demonstrate following object of JavaScript listing their common properties and methods
+string
+math
+date
+boolean
+-->

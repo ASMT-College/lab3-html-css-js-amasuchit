@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="dynamic"></div>
+     <!--   <div onclick="hideTable()">Hide</div>
+        <div onclick="showTable()">Show</div>
+        <div onmouseover="changeTableColor()">Change Color</div>
+        <div onmouseout="resetTableColor()">Reset Color</div>
+        <script>
+            var myDiv = document.getElementById('dynamic');
+            var myTable = document.createElement('table');
+            var myHeadingRow = document.createElement('tr');
+            var myHeadingColumn1 = document.createElement('td');
+            var myHeadingColumn2 = document.createElement('td');
+            myHeadingColumn1.innerHTML = 'Name';
+            myHeadingColumn2.innerHTML = 'Age';
+            myHeadingRow.appendChild(myHeadingColumn1);
+            myHeadingRow.appendChild(myHeadingColumn2);
+            myTable.appendChild(myHeadingRow);
+            myDiv.appendChild(myTable);
+            
+            function sayHi(){
+                alert('Hi')
+            }
+            function sayHello(){
+                alert('Hello')
+            }
+            myHeadingColumn1.addEventListener('click',sayHi);
+            //myHeadingColumn2.addEventListener('dblclick',sayHello);
+            myHeadingColumn2.setAttribute('ondblclick','sayHello()');
+
+            function hideTable(){
+                var myDiv = document.getElementById("dynamic");
+                myDiv.style.display = "none";
+            }
+            function showTable(){
+                var myDiv = document.getElementById("dynamic");
+                myDiv.style.display = "block";
+            }
+            function changeTableColor(){
+                var myDiv = document.getElementById("dynamic");
+                myDiv.style.backgroundColor = "red";
+            }
+            function resetTableColor(){
+                var myDiv = document.getElementById("dynamic");
+                myDiv.style.backgroundColor = "white";
+            }
+        </script>
+    -->
+            <script>
+            /* assignment
+                create dynamic table when table data is provided as below
+                name:john
+                age:20
+                email:abc@gmail.com
+                using dom  */
+                var data = [{name: "John",age: 20,email: "abc@hotmail.com"}, 
+                {name: "Jack",age: 50,email: "def@hotmail.com"}
+                    ];
+
+            var myDiv = document.getElementById('dynamic');
+            var myTable = document.createElement('table');
+            var myHeadingRow = document.createElement('tr');
+            var myHeadingColumn1 = document.createElement('th');
+            var myHeadingColumn2 = document.createElement('th');
+            var myHeadingColumn3 = document.createElement('th');
+            myHeadingColumn1.innerHTML = 'Name';
+            myHeadingColumn2.innerHTML = 'Age';
+            myHeadingColumn3.innerHTML = 'Email';
+            myHeadingRow.appendChild(myHeadingColumn1);
+            myHeadingRow.appendChild(myHeadingColumn2);
+            myHeadingRow.appendChild(myHeadingColumn3);
+            myTable.appendChild(myHeadingRow);
+            data.forEach(function (item) {
+                var row = document.createElement('tr');
+                var col1 = document.createElement('td');
+                var col2 = document.createElement('td');
+                var col3 = document.createElement('td');
+            
+                col1.innerHTML = item.name;
+                col2.innerHTML = item.age;
+                col3.innerHTML = item.email;
+            
+                row.appendChild(col1);
+                row.appendChild(col2);
+                row.appendChild(col3);
+            
+                myTable.appendChild(row);
+            });
+            myDiv.appendChild(myTable);
+
+        </script>
+        
+
+    <!--& write form object's  methods and property and events -->
+</body>
+</html>
