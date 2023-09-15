@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="dynamicTable"></div>
+    <script>
+        var studentsList = [
+        {
+            name : 'Dipendra',
+            age : 21
+        },
+        {
+            name : 'hari',
+            age :60
+        },
+        {
+            name : 'shyam',
+            age : 50
+        },
+        {
+            name : 'geeta',
+            age : 34
+        }
+        ];
+        function generateTable(){
+            var myTable = `
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>age</td>
+                </tr>
+                    `;
+                    studentsList.forEach((student)=>{
+                        myTable =  myTable+`
+                        <tr>
+                            <td>${student.name}</td>
+                            <td>${student.age}</td>
+                        </tr>
+                        `;
+                    });
+                    myTable = myTable+'</table>';
+                    document.getElementById("dynamicTable").innerHTML = myTable;
+        }
+    </script>
+</body>
+</html>

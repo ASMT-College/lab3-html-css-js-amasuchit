@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // create direct instance of object
+      var ram = { Name: "Ram", Age: 25, Address: "Sitapaila" };
+      document.write("His Name is:" + ram.Name);
+
+      //Create an Object Constructor
+      function Person(na, age, address) {
+        this.Name = na;
+        this.Age = age;
+        this.Address = address;
+      }
+      var ram = new Person("Ram", 25, "Sitapaila");
+      var hari = new Person("Hari", 20, "Basundhara");
+
+      var ram = {
+        Name: "Ram",
+        Age: 25,
+        Address: "Sitapaila",
+        showdetail: showname,
+      };
+      ram.showdetail();
+
+      function showname() {
+        document.write("The name is " + this.Name);
+      }
+    </script>
+  </body>
+</html>
+<!-- 'this' pointer le tya bhako object lai point garcha -->
+
+<!-- Create a class/Object named Circle with Property radius=20 and method to show its area(Math.PI use grne PI lai) -->
